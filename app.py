@@ -24,7 +24,7 @@ def load_data(csv_path: str = "datos_energia.csv"):
     # To do: Completar la función 
     df = pd.read_csv(csv_path)
 
-    df['time'] = pd.to_datetime(df['time'], dayfirst=True, errors="raise")
+    df['time'] = pd.to_datetime(df['time'])
 
     df = df.set_index('time').sort_index()
 
@@ -246,4 +246,4 @@ def update_output_div(date, hour, proy):
 
 # Run the server
 if __name__ == "__main__":
-    app.run_server(host="0.0.0.0", debug=True)
+    app.run(host="0.0.0.0", debug=True)
