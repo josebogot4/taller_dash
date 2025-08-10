@@ -20,7 +20,7 @@ app.config.suppress_callback_exceptions = True
 
 
 # Load data from csv
-def load_data(csv_path = r"C:\Users\mario\OneDrive\MAIA\semestre 4\PDS\w1_taller_1\datos_energia.csv"):
+def load_data(csv_path: str = "datos_energia.csv"):
     # To do: Completar la función 
     df = pd.read_csv(csv_path)
 
